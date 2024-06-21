@@ -1,4 +1,5 @@
-body {
+/* 로그인, 아이디 찾기, 비밀번호 찾기 화면 CSS */
+body, footer {
 	background-image: url(/images/parianMarble.jpg);
 	background-size: cover;
 }
@@ -43,9 +44,9 @@ body {
 	cursor: pointer;
 }
 
-.containerLogin h4{
+.containerLogin h4 {
 	font-weight: bold;
-	margin-top: 3px;	
+	margin-top: 3px;
 }
 
 .inputForm {
@@ -69,8 +70,12 @@ body {
 	color: black;
 	padding: 10px 0;
 	width: 100%;
-	position: absolute;
 	bottom: 0;
+	position: absolute;
+}
+
+.footer p {
+	margin-bottom: 5px;
 }
 
 .footer a {
