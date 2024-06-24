@@ -103,3 +103,10 @@ body, footer {
 .search {
 	margin-block-end: auto;
 }
+
+.navName{
+	margin-top: 8px;
+	margin-bottom: 0px;
+	color: green;
+	font-weight: bold;
+}

@@ -10,6 +10,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/css/login.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <style>
 	    .containerLogin {
 			width: 458px;
@@ -26,7 +27,7 @@
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img class="hanbatang" src="images/HANBATANG.png"></a>
+        <a class="navbar-brand" href="/"><img class="hanbatang" src="images/HANBATANG.png"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -46,7 +47,12 @@
               <a class="nav-link" href="#">고객센터</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">로그인</a>
+              <div th:if="${session.loginSession == null}">
+              <a class="nav-link" href="/login">로그인</a>
+              </div>
+              <div th:if="${session.loginSession != null}">
+              <a class="nav-link" href="/logout">로그아웃</a>
+              </div>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">회원가입</a>
@@ -77,15 +83,23 @@
     <div class="outerLogin">
       <div class="containerLogin">
       <h4>비밀번호 찾기</h4>
-        <form>
+        <form action="/findPw" method="post">
           <div class="inputForm">
-            <input type="text" placeholder="아이디" /> <br />
-            <input type="text" placeholder="이름" /> <br />
+            <input type="text" placeholder="아이디" th:field="${mem.member_id}"/> <br />
+            <input type="text" placeholder="이름" th:field="${mem.member_name}"/> <br />
           </div>
           <button>비밀번호 찾기</button>
         </form>
       </div>
     </div>
+	<script>
+		  $(document).ready(function() {
+		      let message = "[[${msg}]]";
+		      if (message != "") {
+		          alert(message);
+		      }
+		  })
+	</script>
 
     <footer class="footer mt-5">
       <div class="container text-center">
@@ -94,4 +108,5 @@
       </div>
     </footer>
   </body>
+  
 </html>
