@@ -1,3 +1,16 @@
+  $(document).ready(function(){
+ $("button:contains('비밀번호확인')").click(function(event){
+  event.preventDefault();
+  const password = $("#userPw").val();
+  const passwordConfirm = $("#userPw_comfirm").val();
+
+  if(password === passwordConfirm) {
+    alert("비밀번호가 일치합니다");
+  }else {
+    alert ("비밀번호가 일치하지 않습니다.")
+  }
+ });
+});
 
    $(document).ready(function () {
         $("#userId").on("input", function () {
@@ -15,7 +28,7 @@
     $(document).ready(function(){
       $("#userPw").on("input",function(){
         const 유저비밀번호 = $(this).val();
-        const regularEx = /^(?=.[a-zA-Z])(?=.\d)(?=.[~!@#$%^&()])[a-zA-Z\d~!@#$%^&*()]{8,12}$/;
+        const regularEx = /^[a-zA-Z0-9\W_]{8,15}$/;
 
         if(regularEx.test(유저비밀번호)){
           $("#msg2").text("비밀번호 형식이 올바릅니다.").css("color","green");
@@ -90,4 +103,3 @@
       });
     });
 
-  

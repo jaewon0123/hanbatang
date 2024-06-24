@@ -1,5 +1,5 @@
 
-      body {
+body {
         background-image: url(/images/hanbatang);
         background-size: cover;
         display: flex;
@@ -11,16 +11,13 @@
         font-weight: bold;
       }
       .footer {
-        background-color: #f8f9fa;
-        color: black;
-        padding: 10px 0;
-        width: 100%;
-      
-        bottom: 0;
-        text-align: center;
-        background-image: url(한바탕_바탕화면.jpg);
-        background-size: cover;
-      }
+	background-color: #F8F9FA;
+	color: black;
+	padding: 10px 0;
+	width: 100%;
+	bottom: 0;
+	
+}
       .footer a {
         color: black;
         text-decoration: none;
@@ -88,5 +85,12 @@
       button:hover {
         background-color: rgb(105, 103, 103);
       }
+      
      
+    
+      .box input {
+        width: 40%;
+        position: relative;
+        height: 40px;
+      }
    
