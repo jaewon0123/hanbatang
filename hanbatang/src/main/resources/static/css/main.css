@@ -1,0 +1,86 @@
+/* 매장 안내 화면 CSS */
+body, footer {
+	background-image: url(/images/parianMarble.jpg);
+	background-size: cover;
+}
+.marketGuideContainer{
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.marketGuideContainer img{
+	width: 100%;
+	margin: 0 auto;
+	border: 1px solid black;
+}
+.marketAddress {
+	display: inline-flex;
+	font-size: xx-large;
+}
+.marketAddress a {
+	margin-left: 30px;
+}
+
+.marketAddress button{
+	background-color: black;
+	color: white;
+}
+.marketInfo{
+	display:block;
+	margin: 0 auto;
+	width: 90%;
+}
+.marketInfo table{
+	width: 50%;
+}
+
+.marketDetailInfo{
+	display: inline-block;
+	width: 14%;
+}
+
+.footer {
+	background-color: #f8f9fa;
+	color: black;
+	padding: 10px 0;
+	width: 100%;
+	bottom: 0;
+}
+
+.footer p {
+	margin-bottom: 5px;
+}
+
+.footer a {
+	color: black;
+	text-decoration: none;
+}
+
+.footer a:hover {
+	text-decoration: underline;
+}
+
+.btn:hover {
+	background-color: black;
+	color: white;
+}
+
+.signin, .cart {
+	width: 60px;
+}
+
+.nav-item {
+	padding-right: 20px;
+}
+
+.search {
+	margin-block-end: auto;
+}
+
+.navName{
+	margin-top: 8px;
+	margin-bottom: 0px;
+	color: green;
+	font-weight: bold;
+}
