@@ -1,8 +1,5 @@
 package com.hanbatang.controller;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,11 +19,6 @@ import lombok.extern.slf4j.Slf4j;
 public class LoginController {
 	@Autowired
 	private LoginService loginService;
-	
-	@GetMapping("/")
-	public String mainPage() {
-		return "mainPage";
-	}
 	
 	@GetMapping("/login")
 	public String loginPage(Model model) {
