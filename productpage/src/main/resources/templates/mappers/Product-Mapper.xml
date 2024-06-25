@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+<mapper namespace="com.hanbatang.mapper.ProductPageMapper">
+	<select id="getGoodsByKinds" resultType="com.hanbatang.dto.ProductPage" parameterType="String">
+		SELECT g.goods_no, g.goods_kinds, g.goods_name, g.goods_price, g.img_path,
+		 		g.goods_text,g.price_avg, k.bk_name, k.beef_kind, k.bk_origin
+		FROM goods g, kinds k
+		WHERE g.goods_kinds = k.bk_name;
+	</select>
+
+</mapper>

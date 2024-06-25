@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title></title>
@@ -11,7 +11,7 @@
 	    }
 	    function cartClick(){
 	        alert("장바구니에 담겼습니다!");
-	    } 
+	    }
     </script>
 </head>
 <body>
@@ -73,18 +73,18 @@
         <div class="main">
         <div class="product">
           <!-- 고기 이미지 삽입 -->
-            <img src="">
+            <img th:src="@{${product.img_path}}">
             
         </div>
         <div class="productdescription">
         <!-- 상품 가격, 상품 설명 등-->
-         <h4><!-- 고기종류 --></h4><br>
+         <h4 th:text="${product.beef_kind}"><!-- 고기종류 --></h4><br>
         <ul>
           <!-- DB 등록된 정보 들어가기 -->
-            <li><font size="4">원 산 지</font> : </li> <br>
-            <li><font size="4">상품 설명</font> : </li><br>
-            <li><strong> 가 격 : </strong><br>
-                <small></small></li>
+            <li><font size="4">원 산 지</font> : <b th:text="${product.bk_origin}"></b> </li> <br>
+            <li><font size="4">상품 설명</font> : <b th:text="${product.goods_text}"></b> </li><br>
+            <li><strong> 가 격 : <strong th:text="${product.goods_price}"></strong> </strong><br>
+                <small th:text="${product.price_avg}"></small></li>
         </ul><br>
         <!-- "장바구니에 추가되었습니다" 출력 -->
         <button class="byProduct" onclick="byClick()">구매하기</button>
