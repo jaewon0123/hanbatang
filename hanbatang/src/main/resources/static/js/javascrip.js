@@ -54,7 +54,7 @@
     $(document).ready(function(){
       $("#userEmail").on("input",function(){
         const 유저이메일 = $(this).val();
-        const regularEx =  /^[a-zA-Z0-9]{6,12}$/;
+        const regularEx =  /^[a-zA-Z\d._%+-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/;
 
         if(regularEx.test(유저이메일)){
           $("#msg4").text("이메일 형식이 올바릅니다.").css("color","green");
