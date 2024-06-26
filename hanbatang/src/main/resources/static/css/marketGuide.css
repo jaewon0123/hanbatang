@@ -84,3 +84,27 @@ body, footer {
 	color: green;
 	font-weight: bold;
 }
+.fixedArea {
+	width: 100px;
+	height: 200px;
+	border: none;
+	border-radius: 20px;
+	bottom: 30px;
+	right: 30px;
+	position: fixed;
+	background-color: #FA8585;
+}
+.fixedArea a {
+	width: 100%;
+	height: 50%;
+	text-decoration: none;
+	text-align: center;
+	display: block;
+	line-height: 40px;
+}
+
+.fixedArea img {
+	width: 80%;
+	height: 80%;
+	margin: 10px;
+}
