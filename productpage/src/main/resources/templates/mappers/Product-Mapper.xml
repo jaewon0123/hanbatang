@@ -3,12 +3,18 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
         
-<mapper namespace="com.hanbatang.mapper.ProductPageMapper">
-	<select id="getGoodsByKinds" resultType="com.hanbatang.dto.ProductPage" parameterType="String">
-		SELECT g.goods_no, g.goods_kinds, g.goods_name, g.goods_price, g.img_path,
-		 		g.goods_text,g.price_avg, k.bk_name, k.beef_kind, k.bk_origin
-		FROM goods g, kinds k
-		WHERE g.goods_kinds = k.bk_name;
+<mapper namespace="com.hanbatang.mapper.ProductPageMapper">	
+	<!-- 메인페이지 -->
+	<select id="getAllProduct" resultType="com.hanbatang.dto.ProductPage">
+		SELECT * FROM GOODS
 	</select>
-
+	<!-- 상품상세 페이지 -->
+	<select id="getGoodsByKind" resultType="com.hanbatang.dto.ProductPage" parameterType="String">
+		SELECT goods.goods_kinds, goods.goods_price, goods.img_path, goods.goods_text, goods.price_avg,
+				kinds.beef_kind, kinds.bk_origin
+		FROM goods  
+		JOIN kinds  
+		ON goods.goods_kinds = kinds.bk_name;
+		WHERE goods.goods_kinds = #{goods_kinds}
+	</select>
 </mapper>

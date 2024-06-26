@@ -1,5 +1,7 @@
 package com.hanbatang.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +14,11 @@ public class ProductPageService {
 	@Autowired
 	private ProductPageMapper productPageMapper;
 	
-	public ProductPage getGoodsByKinds(String goods_kinds) {
-		return productPageMapper.getGoodsByKinds(goods_kinds);
+	public List<ProductPage> getAllProduct(){
+		return productPageMapper.getAllProduct();
+	}
+	
+	public ProductPage getGoodsByKind(String goods_kinds) {
+		return productPageMapper.getGoodsByKind(goods_kinds);
 	}
 }

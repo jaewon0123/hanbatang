@@ -1,5 +1,7 @@
 package com.hanbatang.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,13 +18,15 @@ public class productPageController {
 	private ProductPageService productPageService;
 	
 	@GetMapping("/")
-	public String main() {
-		return "main";
+	public String getAllGoods(Model model) {
+		List<ProductPage> productPage = productPageService.getAllProduct();
+		model.addAttribute("productPage", productPage);
+		return "index";
 	}
 	
 	@GetMapping("/productPage/{goods_kinds}")
-	public String getGoodsByKinds(Model model, @PathVariable String goods_kinds) {
-		ProductPage productPage = productPageService.getGoodsByKinds(goods_kinds);
+	public String productPage(Model model, @PathVariable String goods_kinds) {
+		ProductPage productPage = productPageService.getGoodsByKind(goods_kinds);
 		model.addAttribute("productPage", productPage);
 		return "productPage";
 	}
