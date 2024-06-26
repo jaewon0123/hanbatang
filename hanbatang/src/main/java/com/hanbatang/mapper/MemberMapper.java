@@ -6,6 +6,6 @@ import com.hanbatang.dto.Member;
 
 @Mapper
 public interface MemberMapper {
-      
-	 void insertMember(Member member);
+     
+	void insertMember(Member member);
 }

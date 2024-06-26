@@ -1,6 +1,6 @@
 
 body {
-        background-image: url(/images/hanbatang);
+        background-image:  url(/image/parianmarble.jpg);
         background-size: cover;
         display: flex;
         flex-direction: column;
@@ -16,6 +16,7 @@ body {
 	padding: 10px 0;
 	width: 100%;
 	bottom: 0;
+	
 	
 }
       .footer a {
