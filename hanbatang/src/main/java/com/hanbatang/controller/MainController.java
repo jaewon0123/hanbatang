@@ -14,4 +14,14 @@ public class MainController {
 	public String showMarketGuide() {
 		return "MarketGuide";
 	}
+	
+	@GetMapping("/introCompany")
+	public String showIntroCompany() {
+		return "introCompany";
+	}
+	
+	@GetMapping("/beefInfo")
+	public String showBeefInfo() {
+		return "beefKindsInfo";
+	}
 }
