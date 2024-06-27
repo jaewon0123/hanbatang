@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.hanbatang.dto.Members;
+import com.hanbatang.service.EmailService;
 import com.hanbatang.service.LoginService;
 
 import jakarta.servlet.http.HttpServletResponse;
@@ -19,6 +20,9 @@ import lombok.extern.slf4j.Slf4j;
 public class LoginController {
 	@Autowired
 	private LoginService loginService;
+	
+	@Autowired
+	private EmailService emailService;
 	
 	@GetMapping("/login")
 	public String loginPage(Model model) {
@@ -84,13 +88,16 @@ public class LoginController {
 		Members member = loginService.getFindPw(member_id, member_name);
 
 		if(member != null) {
-			model.addAttribute("msg", "회원님의 비밀번호는 : "+member.getMember_pw()+" 입니다.");
+			int number = emailService.sendMail("wjtkwn19@gmail.com");
+			loginService.updateNewPw(member_id, member_name, Integer.toString(number));
+			model.addAttribute("msg", "회원님의 임시 비밀번호가 발급되었습니다.");
+			model.addAttribute("mem", new Members());
+			return "login";
 		} else {
 			model.addAttribute("msg", "입력된 값이 잘못되었습니다. 다시 입력해주세요.");
-		}
-		model.addAttribute("mem", new Members());
-		
-		return "/findPw";
+			model.addAttribute("mem", new Members());
+			return "/findPw";
+		}	
 	}
 	
 	@GetMapping("/logout")

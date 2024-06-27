@@ -21,4 +21,8 @@ public class LoginService {
 	public Members getFindPw(String member_id, String member_name) {
 		return loginMapper.getFindPw(member_id, member_name);
 	}
+	
+	public void updateNewPw(String member_id, String member_name, String member_pw) {
+		loginMapper.updateNewPw(member_id, member_name, member_pw);
+	}
 }
