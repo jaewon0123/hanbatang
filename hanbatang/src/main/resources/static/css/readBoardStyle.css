@@ -2,9 +2,6 @@
     background-image:  url(/images/parianmarble.jpg);
     background-size: cover;
 }
-.parianmarble{
-	height: 800px;
-}
 .footer {
     background-color: #F8F9FA;
     color: black;
@@ -32,7 +29,7 @@
   .search {
     margin-block-end: auto;
   }
-.fixedArea {
+  .fixedArea {
 width: 100px;
 height: 200px;
 border: none;
@@ -55,37 +52,26 @@ width: 80%;
 height: 80%;
 margin: 10px;
 }
-
-.board-box{
-flex: 1;
-padding: 10px;
-border-bottom: 2px solid #ccc;
-overflow-y: auto;
-}
-.board-container {
-text-align: center;
-margin-top: 10px;
+.BoardTextPlace{
 width: 90%;
-height: 500px;
-border: 2px solid #ccc;
-display: flex;
-}
-
-#newText{
-background-color: #FA8585;
-border: none;
-color: black;
-}
-#newText a:hover{
-	color:white;
-}
-h2{
+height: 700px;
+justify-content: center;
+background-color: white;
+margin: auto;
 padding: 10px;
 }
-a{
-  text-decoration: none;
-  color: black;
+.container{
+	margin: auto;
+	padding: 40px;
 }
-a:hover{
-  color: #FA8585;
+.BoardInformation{
+	margin: auto;
+	margin-left: 20px;
+}
+h3{
+	margin-left: 50px;
+	margin: 20px;
+}
+h6{
+	margin-left: 50px;
 }

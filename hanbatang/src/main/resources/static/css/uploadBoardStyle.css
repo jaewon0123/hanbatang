@@ -1,3 +1,7 @@
+.parianmarble,footer {
+    background-image:  url(/images/parianmarble.jpg);
+    background-size: cover;
+}
 .footer {
     background-color: #F8F9FA;
     color: black;

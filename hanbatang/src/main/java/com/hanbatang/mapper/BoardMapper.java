@@ -11,5 +11,10 @@ public interface BoardMapper {
 	List<Board> getAllPost();
 
 	void insertBoard(Board board);
+	
+	public void uploadPost(Board board);
+	
+	Board getBoardById(int board_no);
+	
 }
 
