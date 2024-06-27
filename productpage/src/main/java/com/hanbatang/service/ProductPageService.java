@@ -14,11 +14,15 @@ public class ProductPageService {
 	@Autowired
 	private ProductPageMapper productPageMapper;
 	
-	public List<ProductPage> getAllProduct(){
-		return productPageMapper.getAllProduct();
+	
+	public ProductPage getGoodsByKind(int goods_no) {
+		return productPageMapper.getGoodsByKind(goods_no);
 	}
 	
-	public ProductPage getGoodsByKind(String goods_kinds) {
-		return productPageMapper.getGoodsByKind(goods_kinds);
+	public List<ProductPage> getProductsByTab(String goods_kinds) {
+		return productPageMapper.getProductsByTab(goods_kinds);
 	}
+	
+	
+
 }

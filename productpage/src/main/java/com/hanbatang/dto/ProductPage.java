@@ -20,9 +20,7 @@ public class ProductPage {
 	private String img_path;
 	private String goods_text;
 	private int price_avg; 
-	
-	// kinds 테이블
-	private String beef_kind; 
-	private String bk_origin;
+	private String origin;
+	private String goods_name;
 	
 }

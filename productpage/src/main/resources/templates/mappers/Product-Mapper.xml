@@ -2,19 +2,26 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-        
-<mapper namespace="com.hanbatang.mapper.ProductPageMapper">	
+
+<mapper namespace="com.hanbatang.mapper.ProductPageMapper">
 	<!-- 메인페이지 -->
-	<select id="getAllProduct" resultType="com.hanbatang.dto.ProductPage">
-		SELECT * FROM GOODS
-	</select>
+
 	<!-- 상품상세 페이지 -->
-	<select id="getGoodsByKind" resultType="com.hanbatang.dto.ProductPage" parameterType="String">
-		SELECT goods.goods_kinds, goods.goods_price, goods.img_path, goods.goods_text, goods.price_avg,
-				kinds.beef_kind, kinds.bk_origin
-		FROM goods  
-		JOIN kinds  
-		ON goods.goods_kinds = kinds.bk_name;
-		WHERE goods.goods_kinds = #{goods_kinds}
+	<select id="getGoodsByKind"
+		resultType="com.hanbatang.dto.ProductPage" parameterType="int">
+		SELECT
+		goods_kinds, goods_name, goods_price, img_path, goods_text, price_avg, origin
+		FROM goods 
+		WHERE goods_no = #{goods_no}
 	</select>
+
+	<!-- main choice select beef -->
+	<select id="getProductsByTab"
+		resultType="com.hanbatang.dto.ProductPage" parameterType="String">
+		SELECT * FROM goods
+		WHERE goods_kinds = #{goods_kinds} <!-- #{goods_kinds} -->
+	</select>
+
+
+
 </mapper>

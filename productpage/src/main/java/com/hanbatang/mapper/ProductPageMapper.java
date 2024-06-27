@@ -9,7 +9,9 @@ import com.hanbatang.dto.ProductPage;
 @Mapper
 public interface ProductPageMapper {
 
-	List<ProductPage> getAllProduct();
-	
-	ProductPage getGoodsByKind(String goods_kinds);
+
+	ProductPage getGoodsByKind(int goods_no);
+
+	List<ProductPage> getProductsByTab(String goods_kinds);
+
 }
