@@ -171,3 +171,50 @@ body, footer {
 	width: 10%;
 	text-align: center;
 }
+
+/* 회사소개 */
+.introCompanyContainer {
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	background-color: white;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.introCompanyLogo {
+	width: 75%;
+	display:block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.introCompanyLogo img {
+	width: 70%;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+.introCompanyInfo {
+	width: 80%;
+	display:block;
+	margin: 0 auto;
+}
+
+.introCompanyInfo img {
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+.introCompanyText {
+	width: 100%;
+	display:block;
+	margin: 0 auto;
+	padding-left: 150px;
+}
+.introCompanyText2{
+	display:flex;
+}

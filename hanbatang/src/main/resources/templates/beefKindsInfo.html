@@ -31,7 +31,7 @@
               <a class="nav-link" href="/beefInfo">소고기정보</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">고객센터</a>
+              <a class="nav-link" href="/board">고객센터</a>
             </li>
             <li th:if="${session.loginSession != null}" class="nav-item">
               <p th:text="${session.loginSession.member_name}+'님'" class="navName"></p>
@@ -45,7 +45,7 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">회원가입</a>
+              <a class="nav-link" href="/memberSignUp">회원가입</a>
             </li>
           </ul>
       </div>
@@ -187,7 +187,7 @@
       </div>
     </footer>
     <div class="fixedArea">
-        <a href="#"><img src="/images/chatbot.png"></a>
+        <a href="/chatbot"><img src="/images/chatbot.png"></a>
         <a href="#"><img src="/images/top.png"></a>
     </div>
   </body>

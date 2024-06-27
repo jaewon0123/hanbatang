@@ -24,4 +24,9 @@ public class MainController {
 	public String showBeefInfo() {
 		return "beefKindsInfo";
 	}
+	
+	@GetMapping("/memberSignUp")
+	public String showSignUp() {
+		return "member-register";
+	}
 }
