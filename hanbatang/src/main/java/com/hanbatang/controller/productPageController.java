@@ -24,12 +24,6 @@ public class productPageController {
 	@Autowired
 	private ProductPageService productPageService;
 
-	@GetMapping("/")
-	public String getAllGoods() {
-		
-		return "index";
-	}
-
     @GetMapping("/api/product/{goods_kinds}")
     public ResponseEntity<List<ProductPage>> getProductsByTab(@PathVariable String goods_kinds,Model model) {
         List<ProductPage> products = productPageService.getProductsByTab(goods_kinds);

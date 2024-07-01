@@ -87,6 +87,13 @@ body {
         background-color: rgb(105, 103, 103);
       }
       
+      .navName{
+		margin-top: 8px;
+		margin-bottom: 0px;
+		color: green;
+		font-weight: bold;
+	  }
+      
      
     
     

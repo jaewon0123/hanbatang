@@ -170,8 +170,6 @@ body, footer {
 .thirdArea {
 	width: 10%;
 	text-align: center;
-<<<<<<< HEAD
-=======
 }
 
 /* 회사소개 */
@@ -219,5 +217,11 @@ body, footer {
 }
 .introCompanyText2{
 	display:flex;
->>>>>>> ea6376fae432c22f543769a282e62c40ba445cf7
+}
+
+.navName{
+	margin-top: 8px;
+	margin-bottom: 0px;
+	color: green;
+	font-weight: bold;
 }

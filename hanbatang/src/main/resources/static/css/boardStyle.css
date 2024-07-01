@@ -89,3 +89,10 @@ a{
 a:hover{
   color: #FA8585;
 }
+
+.navName{
+	margin-top: 8px;
+	margin-bottom: 0px;
+	color: green;
+	font-weight: bold;
+}

@@ -75,3 +75,10 @@ h3{
 h6{
 	margin-left: 50px;
 }
+
+.navName{
+	margin-top: 8px;
+	margin-bottom: 0px;
+	color: green;
+	font-weight: bold;
+}
