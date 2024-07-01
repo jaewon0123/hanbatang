@@ -15,3 +15,4 @@ tabs.forEach(goods_kinds => {
         targetContent.classList.add('active');
     });
 });
+
