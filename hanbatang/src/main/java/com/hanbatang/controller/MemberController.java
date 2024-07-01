@@ -16,10 +16,10 @@ public class MemberController {
 	private MemberService memberService;
 	
 	
-	@GetMapping("/member-register")
+	@GetMapping("/memberSign")
 	public String registerForm(Model model) {
 		model.addAttribute("mem", new Member());
-		return "member-register";
+		return "memberSign";
 		
 	}
 	
