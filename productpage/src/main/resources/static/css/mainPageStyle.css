@@ -136,3 +136,14 @@ a{
 	text-decoration: none;
 	color: black;
 }
+.goods img {
+	border-radius: 10px;
+	width: 400px;
+	height: 400px;
+	padding-bottom: 15px;
+}
+.goods h2 {
+	padding-bottom: 5px;
+}
+
+

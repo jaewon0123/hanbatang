@@ -112,13 +112,13 @@
 			<div class="goods_kinds" data-target="사태">사태</div>
 		</div>
 
-			
+	<div class="goods">	
 		<div class="tab-content">
 			<!-- Thymeleaf 문법을 이용한 동적 렌더링 -->
 			<div th:each="p : ${product}">
 				<h2 th:text="${p.goods_name}"></h2>
 				<a href="/productPage/${p.goods_no}">
-				<img th:src="${p.img_path}" th:alt="${p.GOODS_NAME}">
+				<img class="goodsimg" th:src="${p.img_path}" th:alt="${p.GOODS_NAME}">
 					<p th:text="${p.goods_text}"></p>
 					<p>
 						가격: <span th:text="${p.goods_price} + '원'"></span>
@@ -127,7 +127,7 @@
 			</div>
 			
 		</div>
-				
+	</div>		
 		
 	</div>
 	
@@ -177,7 +177,7 @@
                     data.forEach(product => {
                         tabContent.innerHTML += `
                             <div class="product">
-                                <h2>${product.goods_kinds}</h2>
+                                <h2>${product.goods_name}</h2>
                                 <a href="/productPage/${product.goods_no}">
                                 <img src="${product.img_path}" alt="${product.goods_kinds}">
                                 <p>${product.goods_text}</p>
