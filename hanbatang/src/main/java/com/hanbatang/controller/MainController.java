@@ -9,9 +9,7 @@ public class MainController {
 	public String mainPage() {
 		return "mainPage";
 	}
-<<<<<<< HEAD
-=======
-	
+
 	@GetMapping("/wayToMarket")
 	public String showMarketGuide() {
 		return "MarketGuide";
@@ -31,5 +29,4 @@ public class MainController {
 	public String showSignUp() {
 		return "member-register";
 	}
->>>>>>> ea6376fae432c22f543769a282e62c40ba445cf7
 }
