@@ -36,7 +36,11 @@
               <a class="nav-link" href="/board">고객센터</a>
             </li>
             <li th:if="${session.loginSession != null}" class="nav-item">
+<<<<<<< HEAD
               <p th:text="${session.loginSession.member_name}+'님'" class="navName"></p>
+=======
+              <p th:text="${session.loginSession.member_nickname}+'님'" class="navName"></p>
+>>>>>>> ea6376fae432c22f543769a282e62c40ba445cf7
             </li>
             <li class="nav-item">
               <div th:if="${session.loginSession == null}">
@@ -107,4 +111,8 @@
       </div>
     </footer>
   </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> ea6376fae432c22f543769a282e62c40ba445cf7

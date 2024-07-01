@@ -1,0 +1,8 @@
+com\hanbatang\controller\UploadBoardController.class
+com\hanbatang\HanbatangApplication.class
+com\hanbatang\controller\ReadBoardController.class
+com\hanbatang\dto\Board.class
+com\hanbatang\controller\BoardController.class
+com\hanbatang\service\BoardService.class
+com\hanbatang\controller\MainPageController.class
+com\hanbatang\mapper\BoardMapper.class
