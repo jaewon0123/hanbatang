@@ -5,10 +5,13 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 
 import com.hanbatang.dto.Board;
+import com.hanbatang.dto.Members;
 
 @Mapper
 public interface BoardMapper {
-	List<Board> getAllPost();
+	List<Board> getAllPostNotLogin();
+	
+	List<Board> getAllPost(Members member);
 
 	void insertBoard(Board board);
 	

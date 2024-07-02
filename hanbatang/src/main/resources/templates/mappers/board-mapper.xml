@@ -4,8 +4,12 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
         
 <mapper namespace="com.hanbatang.mapper.BoardMapper">
-	<select id="getAllPost" resultType="com.hanbatang.dto.Board">
-		SELECT * FROM board ORDER BY board_no DESC
+	<select id="getAllPostNotLogin" resultType="com.hanbatang.dto.Board" >
+		SELECT * FROM board WHERE board_public = 'Y' ORDER BY board_no DESC
+	</select>
+
+	<select id="getAllPost" resultType="com.hanbatang.dto.Board" parameterType="com.hanbatang.dto.Members">
+		SELECT * FROM board WHERE board_public = 'Y' OR member_no = #{member_no} ORDER BY board_no DESC
 	</select>
 	
 	<insert id="uploadPost" parameterType="com.hanbatang.dto.Board">
