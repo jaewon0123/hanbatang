@@ -17,6 +17,4 @@ public class MainPageController {
 		return "chatbot";
 	}
 
-	
-
 }

@@ -78,7 +78,7 @@
           </tr>
           </thead>
           <tbody>
-            <tr th:each=" b : ${board}" th:if="${b.board_public} == 'Y'">
+            <tr th:each=" b : ${board}" >
               <td th:text="${b.board_no}"></td>
               <td><a th:text="${b.board_title}" th:href="@{'/readBoard/' + ${b.board_no}}"></a></td>
               <td th:text="${b.member_name}"></td>

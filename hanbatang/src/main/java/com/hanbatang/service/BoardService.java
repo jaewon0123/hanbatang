@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.hanbatang.dto.Board;
+import com.hanbatang.dto.Members;
 import com.hanbatang.mapper.BoardMapper;
 
 @Service
@@ -14,8 +15,12 @@ public class BoardService {
 	@Autowired
 	private BoardMapper boardMapper;
 	
-	public List<Board> getAllPost(){
-		return boardMapper.getAllPost();
+	public List<Board> getAllPostNotLogin(){
+		return boardMapper.getAllPostNotLogin();
+	}
+	
+	public List<Board> getAllPost(Members member){
+		return boardMapper.getAllPost(member);
 	}
 	
 	public void insertBoard(Board board) {
