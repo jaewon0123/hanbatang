@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>                                                                        
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
@@ -21,7 +21,7 @@
             url:"/mail",
             type:"post",
             dataType:"json",
-            data:{"mail" : $("#mail").val()},
+            data:{"mail" : $("#mail").val(), "count" : 0},
             success: function(data){
                 alert("인증번호 발송");
                 $("#Confirm").attr("value",data);
@@ -88,12 +88,13 @@
               <a class="nav-link" href="/memberSignUp">회원가입</a>
             </li>
             <li th:if="${session.loginSession != null}" class="nav-item">
-              <a class="nav-link" href="">마이페이지</a>
+              <a class="nav-link" href="/getMyPage">마이페이지</a>
             </li>
           </ul>
      	 </div>
         </div>
       </div>
+    </nav>
     </nav>
 	<div class="sign-enter">
 		<form th:action="@{/register}" method="post" th:object="${mem}"

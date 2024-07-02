@@ -4,6 +4,7 @@ C:\Users\user1\hanbatang\hanbatang\src\main\java\com\hanbatang\controller\MailCo
 C:\Users\user1\hanbatang\hanbatang\src\main\java\com\hanbatang\controller\MainController.java
 C:\Users\user1\hanbatang\hanbatang\src\main\java\com\hanbatang\controller\MainPageController.java
 C:\Users\user1\hanbatang\hanbatang\src\main\java\com\hanbatang\controller\MemberController.java
+C:\Users\user1\hanbatang\hanbatang\src\main\java\com\hanbatang\controller\MyPageController.java
 C:\Users\user1\hanbatang\hanbatang\src\main\java\com\hanbatang\controller\productPageController.java
 C:\Users\user1\hanbatang\hanbatang\src\main\java\com\hanbatang\controller\ReadBoardController.java
 C:\Users\user1\hanbatang\hanbatang\src\main\java\com\hanbatang\controller\UploadBoardController.java
@@ -15,10 +16,12 @@ C:\Users\user1\hanbatang\hanbatang\src\main\java\com\hanbatang\HanbatangApplicat
 C:\Users\user1\hanbatang\hanbatang\src\main\java\com\hanbatang\mapper\BoardMapper.java
 C:\Users\user1\hanbatang\hanbatang\src\main\java\com\hanbatang\mapper\LoginMapper.java
 C:\Users\user1\hanbatang\hanbatang\src\main\java\com\hanbatang\mapper\MemberMapper.java
+C:\Users\user1\hanbatang\hanbatang\src\main\java\com\hanbatang\mapper\MyPageMapper.java
 C:\Users\user1\hanbatang\hanbatang\src\main\java\com\hanbatang\mapper\ProductPageMapper.java
 C:\Users\user1\hanbatang\hanbatang\src\main\java\com\hanbatang\service\BoardService.java
 C:\Users\user1\hanbatang\hanbatang\src\main\java\com\hanbatang\service\EmailService.java
 C:\Users\user1\hanbatang\hanbatang\src\main\java\com\hanbatang\service\LoginService.java
 C:\Users\user1\hanbatang\hanbatang\src\main\java\com\hanbatang\service\MemberService.java
+C:\Users\user1\hanbatang\hanbatang\src\main\java\com\hanbatang\service\MyPageService.java
 C:\Users\user1\hanbatang\hanbatang\src\main\java\com\hanbatang\service\ProductPageService.java
 C:\Users\user1\hanbatang\hanbatang\src\main\java\com\hanbatang\vo\MailVo.java

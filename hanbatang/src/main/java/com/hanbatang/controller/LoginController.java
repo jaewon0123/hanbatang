@@ -88,7 +88,7 @@ public class LoginController {
 		Members member = loginService.getFindPw(member_id, member_name);
 
 		if(member != null) {
-			int number = emailService.sendMail("wjtkwn19@gmail.com");
+			int number = emailService.sendMail("wjtkwn19@gmail.com", 1);
 			loginService.updateNewPw(member_id, member_name, Integer.toString(number));
 			model.addAttribute("msg", "회원님의 임시 비밀번호가 발급되었습니다.");
 			model.addAttribute("mem", new Members());

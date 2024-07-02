@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <html xmlns:th="http://www.thymeleaf.org">
 =======
 <html>
 >>>>>>> kimjaewon-productpage
+=======
+<html xmlns:th="http://www.thymeleaf.org">
+>>>>>>> sangjunchung-mypage
   <head>
   <meta charset="UTF-8">
   <title>한바탕 마이페이지</title>
@@ -13,9 +17,10 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <style>
-      body{
-        background-image:url(parianMarble.jpg);
+      body, .footer{
+        background-image:url(/images/parianmarble.jpg);
         width: 100%;
       }
       .footer {
@@ -24,22 +29,21 @@
 	   padding: 10px 0;
 	   width: 100%;
 	   bottom: 0;
-     position: absolute;
-    }
-.footer p {
-	margin-bottom: 5px;
-}
-.footer a {
-	color: black;
-	text-decoration: none;
-}
-.footer a:hover {
-	text-decoration: underline;
-}
-.container {
-      width: 1200px;
-     
-  }
+   	   position: absolute;
+      }
+   	  .footer p {
+		margin-bottom: 5px;
+	  }
+	  .footer a {
+		color: black;
+		text-decoration: none;
+	  }
+	  .footer a:hover {
+		text-decoration: underline;
+	  }
+	  .container {
+	      width: 1200px;     
+      }
   .header {
     height: 100px;
     background-color: #f8f9fa;
@@ -75,6 +79,15 @@
   }
   h1 {
    font-weight: bold;
+  }
+  .navName{
+	margin-top: 8px;
+	margin-bottom: 0px;
+	color: green;
+	font-weight: bold;
+  }
+  .nav-item {
+    padding-right: 20px;
   }
     </style>
 </head>
@@ -115,7 +128,7 @@
               <a class="nav-link" href="/memberSignUp">회원가입</a>
             </li>
             <li th:if="${session.loginSession != null}" class="nav-item">
-              <a class="nav-link" href="">마이페이지</a>
+              <a class="nav-link" href="/getMyPage">마이페이지</a>
             </li>
           </ul>
      	 </div>
@@ -136,6 +149,7 @@
     <h2>메뉴</h2>
     <nav class="nav flex-column">
 <<<<<<< HEAD
+<<<<<<< HEAD
      <a href="/editAddress/">회원배송지 수정</a>
      <a href="editMember/">회원정보 수정</a>
      <form th:action="@{/memberBye}" method="get">
@@ -146,8 +160,21 @@
      <a href="#.html" target="_blank">회원정보 수정</a>
      <a href="#" target="_blank">회원탈퇴</a>
 >>>>>>> kimjaewon-productpage
+=======
+     <a href="/editAddress">회원배송지 수정</a>
+     <a href="/editMember">회원정보 수정</a>
+     <a href="/memberBye">회원탈퇴</a>
+>>>>>>> sangjunchung-mypage
     </nav>
 </div>
+<script>
+		  $(document).ready(function() {
+		      let message = "[[${msg}]]";
+		      if (message != "") {
+		          alert(message);
+		      }
+		  })
+	</script>
   </div>
   <footer class="footer mt-2 pt-2">
     <div class="container text-center">

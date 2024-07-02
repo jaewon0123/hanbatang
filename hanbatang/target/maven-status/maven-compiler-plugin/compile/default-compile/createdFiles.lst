@@ -3,6 +3,11 @@ com\hanbatang\HanbatangApplication.class
 com\hanbatang\service\MemberService.class
 com\hanbatang\dto\Member.class
 com\hanbatang\service\LoginService.class
+<<<<<<< HEAD
+=======
+com\hanbatang\mapper\MyPageMapper.class
+com\hanbatang\service\MyPageService.class
+>>>>>>> sangjunchung-mypage
 com\hanbatang\mapper\MemberMapper.class
 com\hanbatang\controller\ReadBoardController.class
 com\hanbatang\service\ProductPageService.class
@@ -19,6 +24,10 @@ com\hanbatang\controller\MainPageController.class
 com\hanbatang\mapper\BoardMapper.class
 com\hanbatang\dto\Board.class
 com\hanbatang\controller\MailController.class
+<<<<<<< HEAD
+=======
+com\hanbatang\controller\MyPageController.class
+>>>>>>> sangjunchung-mypage
 com\hanbatang\dto\Members.class
 com\hanbatang\service\EmailService.class
 com\hanbatang\mapper\ProductPageMapper.class

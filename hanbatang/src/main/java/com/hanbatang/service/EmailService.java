@@ -31,7 +31,7 @@ public class EmailService {
 	}
 	
 	// 메일 양식 기능
-	public MimeMessage createMail(String mail) {
+	public MimeMessage createMail(String mail, int count) {
 		// 인증번호 생성
 		createNum();
 		// 생성된 인증번호를 담는 변수
@@ -47,10 +47,18 @@ public class EmailService {
 			// msg.setRecipient(MimeMessage.RecipientType.TO, mail); -> address 타입 
 			// 태그로 img src 이미지 같이 보낼 수 있음
 			// 첨부파일 참조하는 태그들 이용해서 같이 보낼 수 있음
-			msg.setSubject("임시 비밀번호 발급"); // 보내는 이메일 제목
 			String emailMain = "";
-			emailMain += "<h3>"+"요청하신 임시 비밀번호입니다."+"</h3>";
-			emailMain += "<h1>"+ number +"</h1>";
+			
+			if(count == 1) {
+				msg.setSubject("임시 비밀번호 발급"); // 보내는 이메일 제목
+				emailMain += "<h3>"+"요청하신 임시 비밀번호입니다."+"</h3>";
+				emailMain += "<h1>"+ number +"</h1>";
+			} else {
+				msg.setSubject("이메일 인증번호 발급"); // 보내는 이메일 제목
+				emailMain += "<h3>"+"요청하신 이메일 인증번호입니다."+"</h3>";
+				emailMain += "<h1>"+ number +"</h1>";
+			}
+			
 			msg.setText(emailMain, "UTF-8", "html");
 		} catch (MessagingException e) {
 			e.printStackTrace();
@@ -59,8 +67,8 @@ public class EmailService {
 		return msg; // 메세지. 으로 작성한 모든 내용 담아서 전달하기
 	}
 	
-	public int sendMail(String mail) {
-		MimeMessage msg = createMail(mail);
+	public int sendMail(String mail, int count) {
+		MimeMessage msg = createMail(mail, count);
 		javaMailSender.send(msg);
 		return number;
 	}
