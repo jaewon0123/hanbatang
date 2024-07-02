@@ -11,4 +11,13 @@
 
 	</insert>
 	
+<<<<<<< HEAD
+=======
+	<select id="getLogin" parameterType="java.util.Map" resultType="com.hanbatang.dto.Members">
+	  SELECT * FROM MEMBERS
+		WHERE MEMBER_ID = #{member_id}
+		AND MEMBER_PW = #{member_pw}
+	</select>
+
+>>>>>>> kimjaewon-productpage
 </mapper>

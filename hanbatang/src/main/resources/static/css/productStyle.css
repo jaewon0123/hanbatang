@@ -35,7 +35,12 @@
 
 .product img {
 	border-radius: 20px;
+<<<<<<< HEAD
 	width: 500px;
+=======
+	width: 550px;
+	height: 500px;
+>>>>>>> kimjaewon-productpage
 }
 
 .productdescription {
@@ -94,7 +99,11 @@
 
 body {
 	background-image: url(parianMarble.jpg);
+<<<<<<< HEAD
 	background-size: cover;
+=======
+	
+>>>>>>> kimjaewon-productpage
 }
 
 header {
@@ -103,6 +112,7 @@ header {
 }
 
 .review {
+<<<<<<< HEAD
 	text-align: center;
 	margin: 0 auto;
 	display: block;
@@ -122,3 +132,37 @@ header {
 	color: green;
 	font-weight: bold;
 }
+=======
+	color: yellowgreen;
+	padding: 20px;	
+}
+
+.container,body,  .goods {
+	background-image: url(/images/parianMarble.jpg);
+}
+.vid .steak {
+	width: 60%;
+	height: 500px;
+}
+.vid {
+	padding: 20px;
+
+}
+.page {
+	background-color: white;
+	width: 70%;
+	height: 70%;
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+	box-shadow: 0 0 2px black;
+	border-radius: 10px;
+	
+}
+.black-line {
+	background-color: black;
+	padding: 40px;
+	width: 100%;
+}
+
+>>>>>>> kimjaewon-productpage
