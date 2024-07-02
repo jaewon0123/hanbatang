@@ -130,3 +130,10 @@ header {
 	padding: 40px;
 	width: 100%;
 }
+
+.navName {
+	margin-top: 8px;
+	margin-bottom: 0px;
+	color: green;
+	font-weight: bold;
+}
