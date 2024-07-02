@@ -1,7 +1,7 @@
-
-body {
+body, footer {
         background-image:  url(/images/parianmarble.jpg);
-        background-size: cover;
+}
+body {
         display: flex;
         flex-direction: column;
         min-height: 100vh;

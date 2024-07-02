@@ -93,11 +93,6 @@
 	margin-right: 10px;
 }
 
-body {
-	background-image: url(parianMarble.jpg);
-	
-}
-
 header {
 	background-color: white;
 	width: 100%;
@@ -108,7 +103,7 @@ header {
 	padding: 20px;	
 }
 
-.container,body,  .goods {
+.container,body,  .goods, footer {
 	background-image: url(/images/parianMarble.jpg);
 }
 .vid .steak {
