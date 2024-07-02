@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.hanbatang.dto.Member;
 import com.hanbatang.dto.Members;
 import com.hanbatang.service.EmailService;
 import com.hanbatang.service.LoginService;
@@ -104,5 +105,28 @@ public class LoginController {
 	public String logout(HttpSession session) {
 		session.invalidate();
 		return "redirect:/";
+	}
+	/****updateMember*****/
+	
+	@GetMapping("/getMyPage")
+	public String showMyPage(HttpSession session, Model model) {
+		Member members = (Member) session.getAttribute("loginSession");
+
+		if (members == null) {
+			return "redirect:/login";
+		}
+
+		model.addAttribute("members", members);
+		return "editMember";
+	}
+	@GetMapping("modifyProfileMem")
+	public String modifyMypage(HttpSession session, Model model) {
+		Member members = (Member) session.getAttribute("loginSession");
+
+		if (members == null) {
+			return "redirect:/login";
+		}
+		model.addAttribute("member", members);
+		return "modifyProfileMem";
 	}
 }
