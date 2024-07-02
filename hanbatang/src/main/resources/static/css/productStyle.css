@@ -95,7 +95,7 @@
 
 body {
 	background-image: url(parianMarble.jpg);
-	background-size: cover;
+	
 }
 
 header {
@@ -104,15 +104,35 @@ header {
 }
 
 .review {
+	color: yellowgreen;
+	padding: 20px;	
+}
+
+.container,body,  .goods {
+	background-image: url(/images/parianMarble.jpg);
+}
+.vid .steak {
+	width: 60%;
+	height: 500px;
+}
+.vid {
+	padding: 20px;
+
+}
+.page {
+	background-color: white;
+	width: 70%;
+	height: 70%;
 	text-align: center;
 	margin: 0 auto;
 	display: block;
-	background-color: white;
-	color: yellowgreen;
-	padding: 20px;
+	box-shadow: 0 0 2px black;
+	border-radius: 10px;
+	
+}
+.black-line {
+	background-color: black;
+	padding: 40px;
+	width: 100%;
 }
 
-.review .beefCuts {
-	width: 80%;
-	height: 70%;
-}
