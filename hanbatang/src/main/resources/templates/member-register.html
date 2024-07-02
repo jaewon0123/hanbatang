@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>                                                                        
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
@@ -21,7 +21,7 @@
             url:"/mail",
             type:"post",
             dataType:"json",
-            data:{"mail" : $("#mail").val()},
+            data:{"mail" : $("#mail").val(), "count" : 0},
             success: function(data){
                 alert("인증번호 발송");
                 $("#Confirm").attr("value",data);

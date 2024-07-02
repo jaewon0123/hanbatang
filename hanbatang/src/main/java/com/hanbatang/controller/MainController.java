@@ -29,4 +29,9 @@ public class MainController {
 	public String showSignUp() {
 		return "member-register";
 	}
+	
+	@GetMapping("/getMyPage")
+	public String showMyPage() {
+		return "getMyPage";
+	}
 }

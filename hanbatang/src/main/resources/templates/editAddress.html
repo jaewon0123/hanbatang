@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>한바탕 마이페이지</title>
@@ -10,9 +10,11 @@
         crossorigin="anonymous"
     />
     <style>
+    body, .footer{
+        background-image:url(/images/parianmarble.jpg);
+        width: 100%;
+      }
         body {
-            background-image:url(parianMarble.jpg);
-            background-size: cover;
             font-family: Arial, Helvetica, sans-serif;
             background-color: #f8f9fa;
             margin: 0;
@@ -25,7 +27,7 @@
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin: 20px;
+            margin: 0 auto;
         }
         h1 {
             text-align: center;
@@ -126,10 +128,9 @@
     <br>
     <div class="container form-container">
         <h1>회원배송지 수정</h1>
-        <form action="#" method="post">
-            
+        <form th:action="@{/editAddress}" method="post">
             <div class="input-group">
-                주소: <input type="text" id="member_phone" />
+                주소: <input type="text" th:field="${member.member_address}" />
             </div>
             <button type="submit">수정하기</button>
         </form>

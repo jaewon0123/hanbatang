@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>한바탕 마이페이지</title>
@@ -10,9 +10,11 @@
         crossorigin="anonymous"
     />
     <style>
+    body, .footer{
+        background-image:url(/images/parianmarble.jpg);
+        width: 100%;
+      }
         body {
-            background-image:url(parianMarble.jpg);
-            background-size: cover;
             font-family: Arial, Helvetica, sans-serif;
             background-color: #f8f9fa;
             margin: 0;
@@ -25,7 +27,7 @@
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin: 20px;
+            margin: 0 auto;
         }
         h1 {
             text-align: center;
@@ -125,22 +127,19 @@
     </nav>
     <br>
     <div class="container form-container">
-        <h1>회원배송지 수정</h1>
-        <form action="#" method="post">
+        <h1>회원정보 수정</h1>
+        <form th:action="@{/editMember}" method="post" th:object="${member}">
             <div class="input-group">
-                아이디: <input type="text" id="member_id" />
+                아이디: (수정 불가능) <input type="text" th:field="*{member_id}" readonly />
             </div>
             <div class="input-group">
-                닉네임: <input type="text" id="member_nickname" />
+                닉네임: <input type="text" th:field="*{member_nickname}" />
             </div>
             <div class="input-group">
-                이메일: <input type="text" id="member_email" />
+                이름 : <input type="text" th:field="*{member_name}" />
             </div>
             <div class="input-group">
-                이름 : <input type="text" id="member_name" />
-            </div>
-            <div class="input-group">
-                전화번호: <input type="text" id="member_phone" />
+                전화번호: (하이픈 없이 11자 입력)<input type="text" th:field="*{member_phone}" />
             </div>
             <button type="submit">수정하기</button>
         </form>
