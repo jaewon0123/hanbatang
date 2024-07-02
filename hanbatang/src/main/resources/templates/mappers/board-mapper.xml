@@ -8,11 +8,7 @@
 		SELECT * FROM board
 	</select>
 	
-<<<<<<< HEAD
 	<insert id="uploadPost" parameterType="com.hanbatang.dto.Board">
-=======
-	<insert id="insertBoard" parameterType="com.hanbatang.dto.Board">
->>>>>>> kimjaewon-productpage
 		INSERT INTO board (board_no, member_no, member_name, member_nickname, board_title, board_text, board_public)
 		VALUES (board_seq.NEXTVAL, #{member_no}, #{member_name}, #{member_nickname}, #{board_title}, #{board_text}, #{board_public})
 	</insert>

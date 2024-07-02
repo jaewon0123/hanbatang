@@ -1,13 +1,5 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
-<<<<<<< HEAD
 <html xmlns:th="http://www.thymeleaf.org">
-=======
-<html>
->>>>>>> kimjaewon-productpage
-=======
-<html xmlns:th="http://www.thymeleaf.org">
->>>>>>> sangjunchung-mypage
   <head>
   <meta charset="UTF-8">
   <title>한바탕 마이페이지</title>
@@ -125,10 +117,10 @@
               </div>
             </li>
             <li th:if="${session.loginSession == null}" class="nav-item">
-              <a class="nav-link" href="/memberSignUp">회원가입</a>
+              <a class="nav-link" href="/memberSign">회원가입</a>
             </li>
             <li th:if="${session.loginSession != null}" class="nav-item">
-              <a class="nav-link" href="/getMyPage">마이페이지</a>
+              <a class="nav-link" href="">마이페이지</a>
             </li>
           </ul>
      	 </div>
@@ -136,11 +128,7 @@
       </div>
     </nav>
   <br>
-<<<<<<< HEAD
-  <div class="container" th:if="${member != null}">
-=======
   <div class="container">
->>>>>>> kimjaewon-productpage
     <header class="header">
     <h1>한바탕 마이페이지</h1>
     
@@ -148,23 +136,9 @@
   <div class="sidebar">
     <h2>메뉴</h2>
     <nav class="nav flex-column">
-<<<<<<< HEAD
-<<<<<<< HEAD
-     <a href="/editAddress/">회원배송지 수정</a>
-     <a href="editMember/">회원정보 수정</a>
-     <form th:action="@{/memberBye}" method="get">
-    <button>회원탈퇴</button>
-		</form>
-=======
-     <a href="#" target="_blank">회원배송지 수정</a>
-     <a href="#.html" target="_blank">회원정보 수정</a>
-     <a href="#" target="_blank">회원탈퇴</a>
->>>>>>> kimjaewon-productpage
-=======
      <a href="/editAddress">회원배송지 수정</a>
      <a href="/editMember">회원정보 수정</a>
      <a href="/memberBye">회원탈퇴</a>
->>>>>>> sangjunchung-mypage
     </nav>
 </div>
 <script>

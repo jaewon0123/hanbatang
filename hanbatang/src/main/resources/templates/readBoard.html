@@ -13,11 +13,7 @@
 <body>
 	<nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-<<<<<<< HEAD
-        <a class="navbar-brand" href="/"><img class="hanbatang" src="/images/HANBATANG.png"></a>
-=======
         <a class="navbar-brand" href="/"><img class="hanbatang" src="images/HANBATANG.png"></a>
->>>>>>> kimjaewon-productpage
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -48,15 +44,16 @@
               </div>
             </li>
             <li th:if="${session.loginSession == null}" class="nav-item">
-              <a class="nav-link" href="/memberSignUp">회원가입</a>
+              <a class="nav-link" href="/memberSign">회원가입</a>
             </li>
             <li th:if="${session.loginSession != null}" class="nav-item">
-              <a class="nav-link" href="/getMyPage">마이페이지</a>
+              <a class="nav-link" href="">마이페이지</a>
             </li>
           </ul>
      	 </div>
         </div>
       </div>
+    </nav>
     </nav>
 
 	<div class="parianmarble">
@@ -75,7 +72,6 @@
 		</div>
 
 	</div>
-<<<<<<< HEAD
 	<div class="fixedArea">
 		<a href="/chatbot"><img src="/images/chatbot.png"></a>
 		<!-- popup ********************* -->
@@ -85,22 +81,11 @@
 	<footer class="footer pt-2">
 		<div class="container text-center">
 		
-=======
-	<footer class="footer pt-2">
-		<div class="container text-center">
->>>>>>> kimjaewon-productpage
 			<p>&copy;2024 브랜드 프리미엄소고기. ALL Rights Reserved.</p>
 			<p>
 				<a href="#">개인정보처리방침</a> | <a href="#">이용약관</a>
 			</p>
 		</div>
 	</footer>
-<<<<<<< HEAD
-=======
-	<div class="fixedArea">
-		<a href="#"><img src="/images/chatbot.png"></a> <a href="#"><img
-			src="/images/top.png"></a>
-	</div>
->>>>>>> kimjaewon-productpage
 </body>
 </html>

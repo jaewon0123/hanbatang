@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-const tabs = document.querySelectorAll('.tab');
-const contents = document.querySelectorAll('.content');
-
-tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-        const target = tab.getAttribute('data-target');
-        const targetContent = document.getElementById(target);
-
-        tabs.forEach(t => t.classList.remove('active'));
-        contents.forEach(c => c.classList.remove('active'));
-
-        tab.classList.add('active');
-        targetContent.classList.add('active');
-    });
-});
-=======
-
 document.addEventListener("DOMContentLoaded", function() {
 	// 페이지 로딩 시 등심 데이터를 불러와서 출력합니다.
 	fetchProducts('등심');
@@ -57,4 +39,3 @@ document.addEventListener("DOMContentLoaded", function() {
 			.catch(error => console.error('문제 발생:', error));
 	}
 });
->>>>>>> kimjaewon-productpage

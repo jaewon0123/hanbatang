@@ -15,19 +15,11 @@ public class MemberController {
 	@Autowired
 	private MemberService memberService;
 	
-	
-<<<<<<< HEAD
+
 	@GetMapping("/memberSign")
 	public String registerForm(Model model) {
 		model.addAttribute("mem", new Member());
-		return "memberSign";
-=======
-	@GetMapping("/member-register")
-	public String registerForm(Model model) {
-		model.addAttribute("mem", new Member());
-		return "member-register";
->>>>>>> kimjaewon-productpage
-		
+		return "/memberSign";
 	}
 	
 	@PostMapping("/register")

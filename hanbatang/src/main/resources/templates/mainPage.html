@@ -9,20 +9,13 @@
 	integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
 	crossorigin="anonymous" />
 <link rel="stylesheet" href="/css/mainPageStyle.css">
-<<<<<<< HEAD
-=======
 <script src="/js/mainPageJs.js"></script>
->>>>>>> kimjaewon-productpage
 </head>
 <body>
 
 	<nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-<<<<<<< HEAD
-        <a class="navbar-brand" href="/"><img class="hanbatang" src="/images/HANBATANG.png"></a>
-=======
         <a class="navbar-brand" href="/"><img class="hanbatang" src="images/HANBATANG.png"></a>
->>>>>>> kimjaewon-productpage
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -53,14 +46,10 @@
               </div>
             </li>
             <li th:if="${session.loginSession == null}" class="nav-item">
-<<<<<<< HEAD
               <a class="nav-link" href="/memberSign">회원가입</a>
-=======
-              <a class="nav-link" href="/memberSignUp">회원가입</a>
->>>>>>> kimjaewon-productpage
             </li>
             <li th:if="${session.loginSession != null}" class="nav-item">
-              <a class="nav-link" href="/getMyPage">마이페이지</a>
+              <a class="nav-link" href="">마이페이지</a>
             </li>
           </ul>
      	 </div>
@@ -82,18 +71,10 @@
 				</div>
 				<div class="carousel-inner">
 					<div class="carousel-item active">
-<<<<<<< HEAD
-						<img src="/images/살치살(프랑스).jpg" class="d-block w-100"
-							alt="살치살(프랑스)">
-					</div>
-					<div class="carousel-item">
-						<img src="/images/갈비.jpg" class="d-block w-100" alt="갈비">
-=======
 						<video src="/images/beef2.mp4" class="d-block w-100" alt="beef2" autoplay muted loop></video>
 					</div>
 					<div class="carousel-item">
 						<img src="/images/살치살(일본).jpg" class="d-block w-100" alt="살치살(일본)">
->>>>>>> kimjaewon-productpage
 					</div>
 					<div class="carousel-item">
 						<img src="/images/꽃등심(호주).png" class="d-block w-100"
@@ -131,11 +112,7 @@
 				<h2 th:text="${p.goods_name}"></h2>
 				<a href="/productPage/${p.goods_no}">
 				<img class="goodsimg" th:src="${p.img_path}" th:alt="${p.GOODS_NAME}">
-<<<<<<< HEAD
-					<p th:text="${p.goods_text}"></p>
-=======
 					<h4>상품 설명</h4> <p th:text="${p.goods_text}"></p>
->>>>>>> kimjaewon-productpage
 					<p>
 						가격: <span th:text="${p.goods_price} + '원'"></span>
 					</p>
@@ -154,11 +131,7 @@
 </script>
 
 	<div class="fixedArea">
-<<<<<<< HEAD
-		<a href="/chatbot"><img src="/images/chatbot.png"></a>
-=======
 		<a href="chatbot"><img src="/images/chatbot.png"></a>
->>>>>>> kimjaewon-productpage
 		<!-- popup ********************* -->
 		<a href="#"><img src="/images/top.png"></a>
 	</div>
@@ -173,9 +146,6 @@
 		</div>
 	</footer>
 
-<<<<<<< HEAD
-	<!-- JavaScript 코드 -->
-=======
 
 
 
@@ -200,7 +170,6 @@
     });
 	</script>
 	
->>>>>>> kimjaewon-productpage
 	<script th:inline="javascript">
     document.addEventListener("DOMContentLoaded", function () {
         // 페이지 로딩 시 등심 데이터를 불러와서 출력합니다. ^^
@@ -237,15 +206,10 @@
                 .catch(error => console.error('문제 발생:', error));
         }
     });
-<<<<<<< HEAD
-</script>
-
-=======
     
 
     
 </script>
 -->
->>>>>>> kimjaewon-productpage
 </body>
 </html>

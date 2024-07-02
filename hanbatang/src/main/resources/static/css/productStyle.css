@@ -35,12 +35,8 @@
 
 .product img {
 	border-radius: 20px;
-<<<<<<< HEAD
-	width: 500px;
-=======
 	width: 550px;
 	height: 500px;
->>>>>>> kimjaewon-productpage
 }
 
 .productdescription {
@@ -99,11 +95,7 @@
 
 body {
 	background-image: url(parianMarble.jpg);
-<<<<<<< HEAD
-	background-size: cover;
-=======
 	
->>>>>>> kimjaewon-productpage
 }
 
 header {
@@ -112,27 +104,6 @@ header {
 }
 
 .review {
-<<<<<<< HEAD
-	text-align: center;
-	margin: 0 auto;
-	display: block;
-	background-color: white;
-	color: yellowgreen;
-	padding: 20px;
-}
-
-.review .beefCuts {
-	width: 80%;
-	height: 70%;
-}
-
-.navName{
-	margin-top: 8px;
-	margin-bottom: 0px;
-	color: green;
-	font-weight: bold;
-}
-=======
 	color: yellowgreen;
 	padding: 20px;	
 }
@@ -164,5 +135,3 @@ header {
 	padding: 40px;
 	width: 100%;
 }
-
->>>>>>> kimjaewon-productpage
