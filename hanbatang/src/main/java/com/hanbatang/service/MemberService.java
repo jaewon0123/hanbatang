@@ -21,6 +21,5 @@ public class MemberService {
 
 		memberMapper.insertMember(member);
 	}
-	
-}
 
+}

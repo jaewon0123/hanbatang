@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.hanbatang.dto.Member;
 import com.hanbatang.service.MemberService;
 
+import jakarta.mail.Session;
+import jakarta.servlet.http.HttpSession;
+
 @Controller
 public class MemberController {
 
@@ -23,11 +26,18 @@ public class MemberController {
 	}
 	
 	@PostMapping("/register")
-	public String insertMember(Member member, Model model) {
-		memberService.insertMember(member);
-		model.addAttribute("msg", "한바탕 회원가입을 축하합니다!");
-		return"success";
+	public String insertMember(Member member, HttpSession session, Model model) {
+	    // 회원가입 로직
+	    memberService.insertMember(member);
+
+	    model.addAttribute("msg", "한바탕 회원가입을 축하합니다!");
+        //회원가입을 한 내용을 로긴 세션을 사용해서 유지한 상태로
+	    session.setAttribute("loginSession", member);
+
+	    // 메인 페이지로 리디렉션
+	    return "success";
 	}
+
 	
 	
 }

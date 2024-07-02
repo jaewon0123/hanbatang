@@ -10,4 +10,5 @@
 		VALUES (member_seq.NEXTVAL, #{member_id}, #{member_pw}, #{member_nickname}, #{member_email}, #{member_name}, #{ member_ssn}, #{member_phone}, #{member_address})
 
 	</insert>
+	
 </mapper>
