@@ -5,7 +5,7 @@
         
 <mapper namespace="com.hanbatang.mapper.BoardMapper">
 	<select id="getAllPost" resultType="com.hanbatang.dto.Board">
-		SELECT * FROM board
+		SELECT * FROM board ORDER BY board_no DESC
 	</select>
 	
 	<insert id="uploadPost" parameterType="com.hanbatang.dto.Board">
@@ -17,5 +17,4 @@
 		SELECT * FROM board
 		WHERE board_no = #{board_no}
 	</select>
-	
-</mapper>        
+</mapper> 
