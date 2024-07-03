@@ -23,6 +23,7 @@ public class BoardController {
 	public String getAllPosts(Model model, HttpSession session) {
 		Members member = (Members) session.getAttribute("loginSession");
 		
+<<<<<<< HEAD
 		List<Board> board = new ArrayList<>();
 		
 		if(member != null) {
@@ -31,6 +32,9 @@ public class BoardController {
 			board = boardService.getAllPostNotLogin();
 		}
 		
+=======
+		List<Board> board = boardService.getAllPost();
+>>>>>>> leegyejun-board
 		model.addAttribute("board", board);
 		return "board";
 	}

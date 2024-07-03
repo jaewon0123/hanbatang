@@ -27,6 +27,7 @@ public class BoardService {
 		boardMapper.insertBoard(board);
 	}
 
+	
 	public void uploadPost(int member_no, String member_name, String member_nickname, Board newBoard) {
 		Board board = newBoard;
 
