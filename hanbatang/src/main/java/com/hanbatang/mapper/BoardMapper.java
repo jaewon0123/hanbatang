@@ -16,5 +16,7 @@ public interface BoardMapper {
 	
 	Board getBoardById(int board_no);
 	
+	
+	
 }
 
